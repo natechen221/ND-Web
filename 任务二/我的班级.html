@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="l-header">
+        <div class="header-list">
+            <div class="header-item">
+                <div class="header-title">
+                    <img src="./images/header_logo.png" class="header-title-logo"></img>
+                    <span class="header-title-text">福建省信息教育化统一平台</span>
+                    <div class="header-title-block">
+                        <span class="header-title-block___text">网教通</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-item">
+                <div class="header-content">
+                    <ul>
+                        <li><a href="###" class="header-content-item">首页</a></li>
+                        <li class="li-on"><a href="###" class="header-content-item">教学管理</a></li>
+                        <li><a href="###" class="header-content-item">学习</a></li>
+                        <li><a href="###" class="header-content-item">资源超市</a></li>
+                        <li><a href="###" class="header-content-item">教育应用</a></li>
+                        <li><a href="###" class="header-content-item">新闻</a></li>
+                        <li><a href="###" class="header-content-item">名校名师</a></li>
+                        <li><a href="###" class="header-new-icon">新功能</a></li>
+                        <li><img src="./images/搜索.png" class="header-search-icon"></img></li>
+                        <li><img src="./images/用户头像.png" class="header-user__picture"/></li>
+                        <li><span class="header-user__name">Coco</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="l-content">
+        <div class="l-sidebar">
+                <div class="l-sidebar-top">
+                    <img src="./images/sidebar-arrow.png" class="sidebar-top__icon"></img>
+                    <span class="sidebar-top__text">个人中心</span>
+                    <img src="./images/sidebar-menu.png" class="sidebar-top__icon2"></img>
+                </div>
+                <div class="l-sidebar-content">
+                    <ul class="menu-list">
+                        <li>
+                            <img src="./images/其他内容.png"/>
+                            <a href="###" class="menu-item">其他内容</a>
+                        </li>
+                        <li>
+                            <img src="./images/其他内容2.png" alt="">
+                            <a href="###" class="menu-item">其他内容</a>
+                        </li>
+                        <li class="ui-on">
+                            <img src="./images/我的班级.png" alt="">
+                            <a href="###" class="menu-item">我的班级</a>
+                        </li>
+                        <li>
+                            <img src="./images/其他内容3.png" alt="">
+                            <a href="###" class="menu-item">其他内容</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="l-main">
+            <div class="main_hd">
+                <div class="main-hd__text">我的班级</div>
+                <div class="main-hd-btn">
+                    <a href="./创建班级.html" class="main-hd__bn">创建班级</a>
+                </div>
+            </div> 
+            <hr>
+            <div class="main_bd">
+                <div class="card-main-class1">
+                    <p class="card-txt">行政班是为学生管理和教师管理而设置的班级</p>
+                </div>
+                <div class="card-main-class2">
+                    <p class="card-txt">教学班是根据教学要求而设置的班级</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 读取json文件，动态渲染
+        $.ajax({
+            url: "index.json",
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                $.each(data.classes, function(i, item) {
+                    if(item.type == '行政班'){
+                        var str = '<a id="card-link">' +
+                                  '<div class="card-item"><div class="card-box"><div class="card-item__img">' + 
+                                  '<img src="images/班级.png" class="card-item__photo"/></div>' +
+                                  '<div class="card-item__info"><div class="card-item__title">'+ item.title + '</div>' +
+                                  '<div class="card-item__tab">班级：<span class="card-item__text">' +item.class + '</span></div>' +
+                                  '<div class="card-item__tab">班主任：<span class="card-item__text">' + item.name + '</span></div>' +
+                                  '<div class="card-item__tab">学生：<span class="card-item__text">' + item.student +'人</span></div>' +
+                                  '</div></div><div class="card-item-ft">行政班</div></div></a>'
+                        $(".card-main-class1").append(str);
+                    }
+                    else{
+                        var str = ''
+                        if(item.top == true){
+                            str = '<a id="card-link">' +
+                                  '<div class="card-item"><div class="card-box"><div class="card-item__img">' +
+                                  '<img src="./images/班级皇冠.png" class="card-item-class__tab"><img src="images/班级.png" class="card-item__photo"/></div>' +
+                                  '<div class="card-item__info"><div class="card-item__title">'+ item.title + '</div>' +
+                                  '<div class="card-item__tab">班级：<span class="card-item__text">' +item.class + '</span></div>' +
+                                  '<div class="card-item__tab">班主任：<span class="card-item__text">' + item.name + '</span></div>' +
+                                  '<div class="card-item__tab">学生：<span class="card-item__text">' + item.student +'人</span></div>' +
+                                  '</div></div></div></a>'
+                        }
+                        else{
+                            str = '<a id="card-link">' +
+                                  '<div class="card-item"><div class="card-box"><div class="card-item__img">' + 
+                                  '<img src="images/班级.png" class="card-item__photo"/></div>' +
+                                  '<div class="card-item__info"><div class="card-item__title">'+ item.title + '</div>' +
+                                  '<div class="card-item__tab">班级：<span class="card-item__text">' +item.class + '</span></div>' +
+                                  '<div class="card-item__tab">班主任：<span class="card-item__text">' + item.name + '</span></div>' +
+                                  '<div class="card-item__tab">学生：<span class="card-item__text">' + item.student +'人</span></div>' +
+                                  '</div></div></div></a>'
+                        }
+
+                        $(".card-main-class2").append(str);
+                    }
+                })
+            }
+            }),
+        // 读取localStorage数据
+        $(document).ready(function () { 
+            if (localStorage) {
+                var item = JSON.parse(localStorage.class)
+
+                if(item.type == "行政班"){
+                    var str =   '<a id="card-link">' +
+                                '<div class="card-item"><div class="card-box"><div class="card-item__img">' + 
+                                '<img src="images/班级.png" class="card-item__photo"/></div>' +
+                                '<div class="card-item__info"><div class="card-item__title">'+ item.title + '</div>' +
+                                '<div class="card-item__tab">班级：<span class="card-item__text">' +item.class + '</span></div>' +
+                                '<div class="card-item__tab">班主任：<span class="card-item__text">' + item.name + '</span></div>' +
+                                '<div class="card-item__tab">学生：<span class="card-item__text">' + item.student +'人</span></div>' +
+                                '</div></div><div class="card-item-ft">行政班</div></div></a>'
+                    $(".card-main-class1").append(str);
+                }
+                else{
+                    var str = ''
+                    if(item.top == true){
+                        str =   '<a id="card-link">' +
+                                '<div class="card-item"><div class="card-box"><div class="card-item__img">' +
+                                '<img src="./images/班级皇冠.png" class="card-item-class__tab"><img src="images/班级.png" class="card-item__photo"/></div>' +
+                                '<div class="card-item__info"><div class="card-item__title">'+ item.title + '</div>' +
+                                '<div class="card-item__tab">班级：<span class="card-item__text">' +item.class + '</span></div>' +
+                                '<div class="card-item__tab">班主任：<span class="card-item__text">' + item.name + '</span></div>' +
+                                '<div class="card-item__tab">学生：<span class="card-item__text">' + item.student +'人</span></div>' +
+                                '</div></div></div></a>'
+                    }
+                    else{
+                        str =   '<a id="card-link">' +
+                                '<div class="card-item"><div class="card-box"><div class="card-item__img">' + 
+                                '<img src="images/班级.png" class="card-item__photo"/></div>' +
+                                '<div class="card-item__info"><div class="card-item__title">'+ item.title + '</div>' +
+                                '<div class="card-item__tab">班级：<span class="card-item__text">' +item.class + '</span></div>' +
+                                '<div class="card-item__tab">班主任：<span class="card-item__text">' + item.name + '</span></div>' +
+                                '<div class="card-item__tab">学生：<span class="card-item__text">' + item.student +'人</span></div>' +
+                                '</div></div></div></a>'
+                    }
+
+                    $(".card-main-class2").append(str);
+                }
+            }
+        })
+
+        // url传参
+        $(function(){
+            $(document).on('click','#card-link',function(){
+                var class_name = $(this).children().children().eq(0).children().eq(1).children().eq(1).children().eq(0).text()
+                location.href = encodeURI('./班级成员.html?class_name='+class_name)
+            })
+        })
+
+            
+    </script>
+</body>
+</html>

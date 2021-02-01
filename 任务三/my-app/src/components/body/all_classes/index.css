@@ -1,0 +1,82 @@
+/* 主体班级卡片 */
+.card-main-class{
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-txt{
+    font-size: 0.875em;
+    font-weight: lighter;
+    font-family: STHeiti;
+    color: #949494;
+}
+
+.card-link{
+    text-decoration: none;
+    color: black;
+}
+
+.card-item{
+    float: left;
+    height: 9em;
+    width: 30%;
+    margin-right: 19px;
+    margin-bottom: 19px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+.card-box{
+    position: relative;
+    top: 1.625em;
+    bottom: 1.625em;
+}
+
+.card-item__img{
+    float: left;
+}
+
+.card-item__photo{
+    width: auto;
+    height: auto;
+    margin-left: 1.81em;
+    margin-right: 0.9375em;
+}
+
+.card-item__title{
+    text-decoration: none;
+}
+
+.card-item__info{
+    line-height: 1.625em;
+    font-size: 0.75em;
+}
+
+.card-item__tab{
+    font-weight: lighter;
+    color: #999999;
+}
+
+.card-item__text{
+    font-weight: normal;
+    color: black;
+}
+
+.card-item-class__tab{
+    position: absolute;
+    left: 40px;
+}
+
+.card-item-ft{
+    display: inline;
+    width: 56px;
+    height: 20px;
+    color: white;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: #3ba8f0;
+    float: right;
+    position: relative;
+    top:4em
+}
+

@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* 重置部分 */
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+hr{
+    border: none;
+	height: 1px;
+    background-color: #dddddd;
+}
+
+
+/* 布局组件 */
+.l-header{
+    width: 100%;
+    height: 5.4%;
+}
+
+.l-content{
+    position: absolute;
+    top: 9.54%;
+    width: 100%;
+    height: 100%;
+}
+
+.l-sidebar{
+    position: absolute;;
+    left: 13.2%;
+    top: 0;
+    bottom: 0;
+    width: 12.5%;
+    overflow: auto;
+}
+
+.l-main{
+    bottom: 0;
+    /* margin-left: 528px; */
+    margin-left: 27.5%;
+    /* margin-right: 254px; */
+    margin-right: 13.2%;
+    overflow: auto;
+}
+
+
+/* 头部组件 */
+.header-list{
+    font-size: 1em;
+    font-family: Adobe Heiti Std;
+}
+
+.header-item{
+    display: inline;
+}
+
+.header-title{
+    display: inline;
+    position: relative;
+    left: 13.2%;
+}
+
+.header-title-logo{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.header-title-text{
+    font-size: 0.875em;
+    color: #21944b;
+}
+
+.header-title-block{
+    display: inline;
+    background-color: #21944b;
+    border-radius: 10px;
+}
+
+.header-title-block___text{
+    font-size: 0.75em;
+    font-weight:lighter;
+    color: white;
+    text-align: center;
+    vertical-align:text-top;
+    margin: 7px;
+}
+
+.header-content{
+    position: relative;
+    display: inline;
+    left: 13.2%;
+}
+
+.header-content ul{
+    display: inline;
+    list-style: none;
+    margin: 0;
+}
+
+.header-content ul li{
+    display: inline;
+    list-style: none;
+}
+
+.header-content-item{
+    position: relative;
+    margin-left: 2%;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+.header-content ul .li-on .header-content-item{
+    color: #3ba8f0;
+}
+
+.header-new-icon{
+    background: url(../../images/新功能bg.png);
+    background-size: 100%;
+    display: inline-block;
+    text-decoration: none;
+    width: 3.6em;
+    font-size: 0.75em;
+    color: white;
+    margin-left: 3.12%
+}
+
+.header-search-icon{
+    margin-left: 3.12%;
+    vertical-align: middle;
+}
+
+.header-user__picture{
+    position: relative;
+    left: 4.27%;
+    vertical-align: middle;
+}
+
+.header-user__name{
+    position: relative;
+    left: 4.27%;
+    top: 5px;
+    margin-left: 5px;
+    font-size: 0.75em;
+}
+
+/* 侧边栏组件 */
+
+/* 侧边栏头部 */
+.l-sidebar-top{
+    padding-bottom: 3.125em;
+    border-right-style: solid;
+    border-color: #dddddd;
+    border-width: 1px;
+}
+
+.sidebar-top__icon{
+    vertical-align: top;
+    padding-right: 16px;
+}
+
+.sidebar-top__text{
+    font-size: 1.25em;
+    color: #999999;
+}
+
+.sidebar-top__icon2{
+    margin-left: 5%;
+    position: relative;
+    top: 5px;
+}
+
+/* 侧边栏菜单 */
+.l-sidebar-content{
+    height: 100%;
+    font-size: 14pt;
+    border-right-style: solid;
+    border-color: #dddddd;
+    border-width: 1px;
+}
+
+.l-sidebar-content ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-list li{
+    list-style: none;
+    height: 60px;
+    padding-left: 24px;
+    cursor: pointer;
+    position: relative;
+} 
+
+.menu-item{
+    position: relative;
+    padding-left: 20px;
+    line-height: 60px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.menu-list li.ui-on .menu-item{
+    color: #3ba8f0;
+}
+
+.menu-list li.ui-on{
+    background: #f4f5f5;
+}
+
+.menu-list li.ui-on::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: url(../../images/sidebar-bg.png) repeat 0 0;
+    background-size: 100% 100%;
+    transition: width .5s;
+}
+
+/* 主体头部 */
+.main_hd{
+    height: 2em;
+    width: 100%;
+}
+
+.main-hd__text{
+    display: inline;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: #000000;
+    position: relative;
+    top: 1.4%;
+}
+
+.main-hd-btn{
+    display: inline;
+    float: right;
+}
+
+.main-hd__bn{
+    display: inline-block;
+    width: 6.25em;
+    height: 2.19em;
+    background-color: #3ca8f0;
+    margin-left: 1.25em;
+    color: white;
+    border: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.19em;
+}

@@ -1,0 +1,155 @@
+/* 查看班级成员组件 */
+
+.course{
+    width: 100%;
+}
+
+.course-hd{
+    width: 100%;
+    height: 6em;
+}
+
+.course-title{
+    display: inline;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #333333;
+    position: relative;
+    left: 35%;
+    line-height: 4.5em;
+}
+
+.course-search{
+    display: inline;
+    margin: 1.25em 0px;
+    float: right;
+}
+
+.course-search__input{
+    display: inline;
+    width: 15.625em;
+    height: 2.125em;
+    overflow: auto;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    border: 1px solid #3ba8f0;
+}
+
+.course-search__input::-webkit-input-placeholder{
+    color: #d6d6d6;
+    position: relative;
+    left: 8px;
+}
+
+.course-search__btn{
+    display: inline;
+    width: 3.125em;
+    height: 2.25em;
+    overflow: auto;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: -5px;
+    top: 0.80em;
+    border: 1px solid #3ba8f0;
+    background-color: #3ba8f0;
+    background-image: url(../../../images/班级成员-放大镜_03.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.course-bd{
+    border: 1px solid #dddddd;
+    height: 696px;
+}
+
+.course-nav{
+    height: 2.25em;
+    background-color: #f5f5f5;
+    color: #9f9f9f;
+    font-size: 0.875em;
+    border-bottom: 1px solid #dddddd;
+}
+
+.course-nav ul{
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+.course-nav li{
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+.course-nav-item{
+    display: inline-block;
+    width: 11.25em;
+    height: 2.25em;
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2.25em;
+    text-decoration: none;
+    color: #9f9f9f;
+}
+
+.course-card{
+    display: inline-block;
+    width: 136px;
+    height: 13.9%;
+    border: 1px solid #dddddd;
+    margin: 21px 0px 0px 21px;
+}
+
+.course-info-all{
+    width: 100%;
+    height: 114px;
+    background: url(../../../images/classes.png) no-repeat;
+}
+
+.course-info{
+    width: 100%;
+    height: 114px;
+    background: url(../../../images/teacher-img.png) no-repeat;
+}
+
+.course-member__name{
+    /* text-align: center; */
+    position: relative;
+    left: 2.5em;
+    line-height: 2.25em;
+}
+
+.course-member__manager{
+    position: relative;
+    top: -20px;
+    float: right;
+    width: 3em;
+    height: 20px;
+    margin-left: 2px;
+    font-size: 12px;
+    color: white;
+    background-color: #fa4b5b;
+    text-align: center;
+    line-height: 20px; 
+}
+
+.course-member__tab{
+    display: inline;
+    float: right;
+    position: relative;
+    margin: 3px;
+    float: right;
+    top: -23px;
+    left: 2px;
+    width: 60px;
+    height: 20px;
+    font-size: 0.75em;
+    color: white;
+    background-color: #f99d43;
+    text-align: center;
+    line-height: 20px;
+}

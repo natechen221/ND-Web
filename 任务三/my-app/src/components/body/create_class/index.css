@@ -1,0 +1,58 @@
+/* 创建班级表单 */
+.class-box{
+    position: relative;
+    margin-top: 17px;
+    font-size: 0.875em;
+    color: #707070;
+}
+
+.class-teacher{
+    color:#3ca8f0;
+}
+
+.class-item{
+    margin-top: 20px;
+}
+
+.class-title{
+    display: inline-block;
+    width: 7.5em;
+    margin-right: 30px;
+    text-align: right;
+}
+
+.class-title__star{
+    color: red;
+    font-weight: bold;
+}
+
+.class-input{
+    width: 25em;
+    height: 2.25em;
+    border:1px solid #d2d2d2;
+    padding: 0;
+    margin: 0;
+}
+
+.class-input::-webkit-input-placeholder{
+    color: #d6d6d6;
+    position: relative;
+    left: 8px;
+}
+
+.class-select{
+    margin: 0;
+    width: 25.25em;
+    height: 2.25em;
+    border:1px solid #d2d2d2;
+    color: #707070;
+    appearance:none;
+    background: url("../../../images/select-arrow.png") no-repeat right;
+}
+
+.class-item-button{
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+

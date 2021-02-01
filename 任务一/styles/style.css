@@ -1,0 +1,559 @@
+@charset "UTF-8";
+/* 重置部分 */
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+hr{
+    border: none;
+	height: 1px;
+    background-color: #dddddd;
+}
+
+
+/* 布局组件 */
+.l-header{
+    width: 100%;
+    height: 5.4%;
+}
+
+.l-content{
+    position: absolute;
+    top: 9.54%;
+    width: 100%;
+    height: 100%;
+}
+
+.l-sidebar{
+    position: absolute;;
+    left: 13.2%;
+    top: 0;
+    bottom: 0;
+    width: 12.5%;
+    overflow: auto;
+}
+
+.l-main{
+    bottom: 0;
+    /* margin-left: 528px; */
+    margin-left: 27.5%;
+    /* margin-right: 254px; */
+    margin-right: 13.2%;
+    overflow: auto;
+}
+
+
+/* 头部组件 */
+.header-list{
+    font-size: 1em;
+    font-family: Adobe Heiti Std;
+}
+
+.header-item{
+    display: inline;
+}
+
+.header-title{
+    display: inline;
+    position: relative;
+    left: 13.2%;
+}
+
+.header-title-logo{
+    height: 2.2%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.header-title-text{
+    font-size: 0.875em;
+    color: #21944b;
+}
+
+.header-title-block{
+    display: inline;
+    background-color: #21944b;
+    border-radius: 10px;
+}
+
+.header-title-block___text{
+    font-size: 0.75em;
+    font-weight:lighter;
+    color: white;
+    text-align: center;
+    vertical-align:text-top;
+    margin: 7px;
+}
+
+.header-content{
+    position: relative;
+    display: inline;
+    left: 13.2%;
+}
+
+.header-content ul{
+    display: inline;
+    list-style: none;
+    margin: 0;
+}
+
+.header-content ul li{
+    display: inline;
+    list-style: none;
+}
+
+.header-content-item{
+    position: relative;
+    margin-left: 2%;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+.header-content ul .li-on .header-content-item{
+    color: #3ba8f0;
+}
+
+.header-new-icon{
+    background: url(../images/新功能bg.png);
+    background-size: 100%;
+    display: inline-block;
+    text-decoration: none;
+    width: 3.6em;
+    font-size: 0.75em;
+    color: white;
+    margin-left: 3.12%
+}
+
+.header-search-icon{
+    background: url(../images/搜索.png) no-repeat;
+    margin-left: 3.12%;
+    vertical-align: middle;
+}
+
+.header-user__picture{
+    position: relative;
+    left: 4.27%;
+    vertical-align: middle;
+}
+
+.header-user__name{
+    position: relative;
+    left: 4.27%;
+    top: 5px;
+    margin-left: 5px;
+    font-size: 0.75em;
+}
+
+/* 侧边栏组件 */
+
+/* 侧边栏头部 */
+.l-sidebar-top{
+    /* padding-bottom: 50px; */
+    /* padding-bottom: 4.63%; */
+    padding-bottom: 3.125em;
+}
+
+.sidebar-top__icon{
+    vertical-align: top;
+    padding-right: 15px;
+}
+
+.sidebar-top__text{
+    font-size: 1.25em;
+    color: #999999;
+}
+
+.sidebar-top__icon2{
+    padding-left: 4.2%;
+    vertical-align: middle;
+}
+
+/* 侧边栏菜单 */
+.l-sidebar-content{
+    height: 100%;
+    font-size: 14pt;
+    border-right-style: solid;
+    border-color: #dddddd;
+    border-width: 1px;
+}
+
+.l-sidebar-content ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-list li{
+    list-style: none;
+    height: 60px;
+    padding-left: 24px;
+    cursor: pointer;
+    position: relative;
+} 
+
+.menu-item{
+    position: relative;
+    padding-left: 20px;
+    line-height: 60px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.menu-list li.ui-on .menu-item{
+    color: #3ba8f0;
+}
+
+.menu-list li.ui-on{
+    background: #f4f5f5;
+}
+
+.menu-list li.ui-on::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: url(../images/sidebar-bg.png) repeat 0 0;
+    background-size: 100% 100%;
+    transition: width .5s;
+}
+
+/* 主体组件 */
+
+/* 主体头部 */
+.main_hd{
+    height: 2em;
+}
+
+.main-hd__text{
+    display: inline;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: #000000;
+    position: relative;
+    top: 1.4%;
+}
+
+.main-hd-btn{
+    display: inline;
+    float: right;
+}
+
+.main-hd__bn{
+    display: inline-block;
+    width: 6.25em;
+    height: 2.19em;
+    background-color: #3ca8f0;
+    margin-left: 1.25em;
+    color: white;
+    border: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.19em;
+}
+
+/* 主体班级卡片 */
+.card-main-class{
+    overflow: hidden;
+}
+
+.card-txt{
+    font-size: 0.875em;
+    font-weight: lighter;
+    font-family: STHeiti;
+    color: #949494;
+}
+
+.card-link{
+    text-decoration: none;
+    color: black;
+}
+
+.card-item{
+    float: left;
+    height: 9em;
+    width: 30%;
+    margin-right: 19px;
+    margin-bottom: 19px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+.card-box{
+    position: relative;
+    top: 1.625em;
+    bottom: 1.625em;
+}
+
+.card-item__img{
+    float: left;
+}
+
+.card-item__photo{
+    width: auto;
+    height: auto;
+    margin-left: 1.81em;
+    margin-right: 0.9375em;
+}
+
+.card-item__title{
+    text-decoration: none;
+}
+
+.card-item__info{
+    line-height: 1.625em;
+    font-size: 0.75em;
+}
+
+.card-item__tab{
+    font-weight: lighter;
+    color: #999999;
+}
+
+.card-item__text{
+    font-weight: normal;
+    color: black;
+}
+
+.card-item-class__tab{
+    position: absolute;
+    left: 40px;
+}
+
+.card-item-ft{
+    display: inline;
+    width: 56px;
+    height: 20px;
+    color: white;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: #3ba8f0;
+    float: right;
+    position: relative;
+    top:4em
+}
+
+
+/* 创建班级表单 */
+.class-box{
+    position: relative;
+    margin-top: 17px;
+    font-size: 0.875em;
+    color: #707070;
+}
+
+.class-teacher{
+    color:#3ca8f0;
+}
+
+.class-item{
+    margin-top: 20px;
+}
+
+.class-title{
+    display: inline-block;
+    width: 7.5em;
+    margin-right: 30px;
+    text-align: right;
+}
+
+.class-title__star{
+    color: red;
+    font-weight: bold;
+}
+
+.class-input{
+    width: 25em;
+    height: 2.25em;
+    border:1px solid #d2d2d2;
+    padding: 0;
+    margin: 0;
+}
+
+.class-input::-webkit-input-placeholder{
+    color: #d6d6d6;
+    position: relative;
+    left: 8px;
+}
+
+.class-select{
+    margin: 0;
+    width: 25em;
+    height: 2.25em;
+    border:1px solid #d2d2d2;
+    color: #707070;
+    appearance:none;
+    background: url("../images/select-arrow.png") no-repeat right;
+}
+
+.class-item-button{
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+
+
+/* 查看班级成员组件 */
+
+.course{
+    width: 100%;
+}
+
+.course-hd{
+    width: 100%;
+    height: 6em;
+}
+
+.course-title{
+    display: inline;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #333333;
+    position: relative;
+    left: 35%;
+    line-height: 4.5em;
+}
+
+.course-search{
+    display: inline;
+    margin: 1.25em 0px;
+    float: right;
+}
+
+.course-search__input{
+    display: inline;
+    width: 15.625em;
+    height: 2.125em;
+    overflow: auto;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    border: 1px solid #3ba8f0;
+}
+
+.course-search__input::-webkit-input-placeholder{
+    color: #d6d6d6;
+    position: relative;
+    left: 8px;
+}
+
+.course-search__btn{
+    display: inline;
+    width: 3.125em;
+    height: 2.25em;
+    overflow: auto;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: -5px;
+    top: 0.80em;
+    border: 1px solid #3ba8f0;
+    background-color: #3ba8f0;
+    background-image: url(../images/班级成员-放大镜_03.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.course-bd{
+    border: 1px solid #dddddd;
+    height: 696px;
+}
+
+.course-nav{
+    height: 2.25em;
+    background-color: #f5f5f5;
+    color: #9f9f9f;
+    font-size: 0.875em;
+    border-bottom: 1px solid #dddddd;
+}
+
+.course-nav ul{
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+.course-nav li{
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+.course-nav-item{
+    display: inline-block;
+    width: 11.25em;
+    height: 2.25em;
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2.25em;
+}
+
+.course-nav ul .li-on .course-nav-item{
+    color: #3ba8f0;
+    background-color: white;
+}
+
+.course-card{
+    display: inline-block;
+    width: 136px;
+    height: 13.9%;
+    border: 1px solid #dddddd;
+    margin: 21px 0px 0px 21px;
+}
+
+.course-info-all{
+    width: 100%;
+    height: 114px;
+    background: url(../images/classes.png) no-repeat;
+}
+
+.course-info{
+    width: 100%;
+    height: 114px;
+    background: url(../images/teacher-img.png) no-repeat;
+}
+
+.course-member__name{
+    /* text-align: center; */
+    position: relative;
+    left: 2.5em;
+    line-height: 2.25em;
+}
+
+.course-member__manager{
+    position: relative;
+    top: -20px;
+    float: right;
+    width: 3em;
+    height: 20px;
+    margin-left: 2px;
+    font-size: 12px;
+    color: white;
+    background-color: #fa4b5b;
+    text-align: center;
+    line-height: 20px; 
+}
+
+.course-member__tab{
+    display: inline;
+    float: right;
+    position: relative;
+    margin: 3px;
+    float: right;
+    top: -23px;
+    left: 2px;
+    width: 60px;
+    height: 20px;
+    font-size: 0.75em;
+    color: white;
+    background-color: #f99d43;
+    text-align: center;
+    line-height: 20px;
+}
